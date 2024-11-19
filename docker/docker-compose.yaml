@@ -36,6 +36,13 @@ services:
     depends_on:
       - loki   
 
+    pyroscope:
+    image: grafana/pyroscope:latest
+    ports:
+      - "4040:4040"
+    volumes:
+      - ./pyroscope-data:/var/pyroscope
+
   alloy:
     image: grafana/alloy:latest  
     command:
