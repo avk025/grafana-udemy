@@ -54,7 +54,6 @@ services:
       - GF_SECURITY_ADMIN_PASSWORD=admin
       - GF_INSTALL_PLUGINS=grafana-llm-app,grafana-pyroscope-datasource
     volumes:
-      - ./config/grafana.ini:/etc/grafana/grafana.ini
       - ./provisioning/datasources/pyroscope-datasource.yaml:/etc/grafana/provisioning/datasources/pyroscope-datasource.yaml
     ports:
       - "3000:3000"
