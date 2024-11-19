@@ -1,0 +1,6 @@
+apiVersion: 1
+datasources:
+  - name: Pyroscope
+    type: pyroscope
+    url: http://pyroscope:4040
+    isDefault: true
