@@ -85,10 +85,3 @@ services:
     depends_on:
       - orderservice
       - paymentservice
-
-  pyroscope:
-    image: grafana/pyroscope:latest
-    ports:
-      - "4040:4040"
-    volumes:
-      - ./pyroscope-data:/var/pyroscope
