@@ -53,6 +53,8 @@ services:
       - "4317:4317"  
       - "4318:4318"  
     entrypoint: sh -c "apt-get update -y && apt-get -y install wget && wget --no-check-certificate -O /etc/alloy/config.alloy https://raw.githubusercontent.com/aussiearef/grafana-udemy/main/alloy/config.alloy && exec /bin/alloy run /etc/alloy/config.alloy"
+    depends_on:
+      - pyroscope
 
   grafana:
     image: grafana/grafana:latest
